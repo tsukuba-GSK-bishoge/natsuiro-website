@@ -23,7 +23,7 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
       - name: Check Articles
-        run: nix develop --command bash -c "npm run build"
+        run: nix develop --command bash -c "npm i && npm run build"
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
