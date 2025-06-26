@@ -1,5 +1,6 @@
 .astro
 .direnv
+.husky
 .vscode
 .DS_Store
 dist
