@@ -1,12 +1,31 @@
+// @ts-check
+
+import eslint from '@eslint/js';
+import gitignore from 'eslint-config-flat-gitignore';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginAstro from 'eslint-plugin-astro';
-export default [
-  // add more generic rule sets here, such as:
-  // js.configs.recommended,
-  ...eslintPluginAstro.configs.recommended,
+import globals from 'globals';
+import tsEslint from 'typescript-eslint';
+
+export default tsEslint.config(
+  gitignore(),
+  eslint.configs.recommended,
+  ...tsEslint.configs.recommended,
   {
+    files: ['**/*.{ts,tsx,mts,cts,astro}'],
     rules: {
-      // override/add rules settings here, such as:
-      // "astro/no-set-html-directive": "error"
+      'no-undef': 'off',
     },
   },
-];
+  ...eslintPluginAstro.configs['flat/recommended'],
+  ...eslintPluginAstro.configs['flat/jsx-a11y-strict'],
+  eslintConfigPrettier,
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+  }
+);

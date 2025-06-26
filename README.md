@@ -8,6 +8,12 @@
 - npm
 - git
 
+Visual Studio Codeを使用している場合は、以下の拡張機能をインストールしてください。
+
+- astro-build.astro-vscode
+- esbenp.prettier-vscode
+- dbaeumer.vscode-eslint
+
 ### 手順
 
 以下の手順に従って、開発環境を構築してください。
