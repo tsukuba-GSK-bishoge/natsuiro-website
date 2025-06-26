@@ -1,5 +1,13 @@
 {
-    "cSpell.words": [
-        "natsuiro"
-    ]
+  // Astroの設定
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+  },
+  // Code Spell Checkerの設定
+  "cSpell.words": [
+      "natsuiro"
+  ]
 }
