@@ -30,3 +30,17 @@ npm i && npm exec husky-init -y &&  npm exec husky set .husky/pre-commit "npm ex
 ```sh
 npm run dev
 ```
+
+## References
+
+- prettier setting
+
+https://docs.astro.build/ja/editor-setup/
+
+- eslint setting
+
+https://ota-meshi.github.io/eslint-plugin-astro/user-guide/
+
+- pre-commit setting
+
+https://r4ai.dev/posts/astro-setup/#lint-staged-husky-%E3%81%AE%E5%B0%8E%E5%85%A5
