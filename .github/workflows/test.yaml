@@ -1,4 +1,4 @@
-name: check
+name: test
 
 on:
   schedule:
@@ -19,7 +19,7 @@ jobs:
         uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-      - name: ESLint eslint "src/**/*.{js,astro}"Check
+      - name: ESLint Check
         run: nix develop --command bash -c "npm i && npm run lint"
       - name: Build Check
         run: nix develop --command bash -c "npm i && npm run build"

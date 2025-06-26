@@ -10,7 +10,7 @@ env:
   IMAGE_NAME: website
 
 jobs:
-  container:
+  deploy-container:
     runs-on: ubuntu-latest
     permissions:
       contents: read
